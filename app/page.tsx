@@ -1,11 +1,10 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/other/icons";
+import AppsCards from "@/components/hero/apps-cards";
 
 export default function Home() {
   return (
@@ -13,11 +12,6 @@ export default function Home() {
       <div className="inline-block max-w-lg text-center justify-center">
         <h1 className={title({ size: "lg" })}>abyan</h1>
         <h1 className={title({ color: "violet", size: "lg" })}>.dev&nbsp;</h1>
-        {/*
-        <br />
-        <h1 className={title()}>
-          websites regardless of your design experience.
-        </h1> */}
         <h2 className={subtitle({ class: "mt-4" })}>
           Abyan's multi-purpose microservices app.
         </h2>
@@ -43,6 +37,7 @@ export default function Home() {
           Source
         </Link>
       </div>
+      <AppsCards />
     </section>
   );
 }

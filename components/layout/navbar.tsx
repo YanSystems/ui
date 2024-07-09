@@ -8,21 +8,16 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 
 import { siteConfig } from "@/config/site";
 import {
-  TwitterIcon,
-  GithubIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
+  GithubIcon
 } from "@/components/other/icons";
+import { Chip } from "@nextui-org/chip";
 
 export const Navbar = () => {
   return (
@@ -30,7 +25,8 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-inherit tracking-wider">abyan<span style={{ color: "#e02ef8" }}>.dev</span></p>
+            <span className="font-bold text-inherit flex items-center">abyan.dev&nbsp;<Chip color="primary" variant="flat" radius="sm">Beta</Chip>
+            </span>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -60,7 +56,7 @@ export const Navbar = () => {
             <GithubIcon className="text-default-500" />
           </Link>
         </NavbarItem>
-        <Button variant="shadow" color="primary">Login</Button>
+        <Button color="primary">Login</Button>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

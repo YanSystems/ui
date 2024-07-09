@@ -1,0 +1,34 @@
+import TaskContentHeader from "./task-content-header"
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import Content from "./t.mdx"
+
+export default function TaskContent() {
+    const markdown = `
+# Multi-line MDX Content
+
+This is a paragraph with some **bold** text and some _italic_ text.
+
+Here is an example of inline code: \`const x = 10;\`
+
+## Code Block Example
+
+Here is a code block:
+
+\`\`\`js
+function greet(name) {
+  return \`Hello, \${name}!\`;
+}
+
+console.log(greet('World'));
+\`\`\`
+
+Another paragraph with more information. You can add as many lines as needed.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+`
+    return <>
+        <TaskContentHeader />
+        <div className="prose dark:prose-invert max-w-none">
+            {/* <Content /> */}
+            <MDXRemote source={markdown} />
+        </div>
+    </>
+}
