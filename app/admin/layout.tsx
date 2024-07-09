@@ -1,4 +1,4 @@
-import { DocsLayout } from "@/components/docs/docs-layout";
+import { AdminLayout } from "@/components/admin/admin-layout";
 
 export default function Layout({
     children,
@@ -6,8 +6,8 @@ export default function Layout({
     children: React.ReactNode;
 }) {
     return (
-        <DocsLayout>
+        <AdminLayout>
             {children}
-        </DocsLayout>
+        </AdminLayout>
     );
 }

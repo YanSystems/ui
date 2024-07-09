@@ -28,7 +28,7 @@ export default async function CoursePage({ params }: Params) {
     };
 
     return (
-        <div className="container mx-auto max-w-full px-6 flex-grow">
+        <div className="mt-16 container mx-auto max-w-full px-6 flex-grow">
             <div className="flex items-start justify-center gap-4 max-w-8xl">
                 <div className="col-span-2">
                     <Course courseDetails={courseDetails} />

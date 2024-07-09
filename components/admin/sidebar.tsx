@@ -2,7 +2,7 @@ import React from "react";
 import { Sidebar } from "./sidebar.styles";
 import { SidebarItem } from "./sidebar-item";
 import { SidebarMenu } from "./sidebar-menu";
-import { useSidebarContext } from "./docs-layout-context";
+import { useSidebarContext } from "./admin-layout-context";
 import { usePathname } from "next/navigation";
 import { Divider } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
@@ -22,23 +22,31 @@ export const SidebarWrapper = () => {
                 })}
             >
                 <div className={Sidebar.Header()}>
-                    Documentation
+                    Admin Panel
                 </div>
                 <p className="px-2 text-zinc-400">Yan Systems v{siteConfig.version}</p>
                 <div className="flex flex-col justify-between h-full">
                     <div className={Sidebar.Body()}>
-                        <SidebarMenu title="Administration">
+                        <SidebarMenu title="Users Management">
                             <SidebarItem
-                                title="Creator Studio"
-                                href="/admin/cms"
+                                title="Catalogue of Users"
+                                href="#"
+                            />
+                        </SidebarMenu>
+                        <SidebarMenu title="Logs and Monitoring">
+                            <SidebarItem
+                                title="User Interactions"
+                                href="#"
+                            />
+                        </SidebarMenu>
+                        <SidebarMenu title="Content Management">
+                            <SidebarItem
+                                title="Collection One"
+                                href="#"
                             />
                             <SidebarItem
-                                title="Users Management"
-                                href="/admin/users"
-                            />
-                            <SidebarItem
-                                title="Logs and Monitoring"
-                                href="/admin/logs"
+                                title="Collection Two"
+                                href="#"
                             />
                         </SidebarMenu>
                     </div>

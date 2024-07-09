@@ -1,4 +1,4 @@
-import { DocsLayout } from "@/components/docs/docs-layout";
+import { Navbar } from "@/components/layout/navbar";
 
 export default function Layout({
     children,
@@ -6,8 +6,9 @@ export default function Layout({
     children: React.ReactNode;
 }) {
     return (
-        <DocsLayout>
+        <>
+            <Navbar />
             {children}
-        </DocsLayout>
+        </>
     );
 }

@@ -1,6 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
+  version: "1.0",
   name: "abyan.dev",
   description: "Multi-purpose web client for Yan systems.",
   navItems: [

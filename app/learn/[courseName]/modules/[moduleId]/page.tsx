@@ -26,7 +26,7 @@ export default async function ModulePage({ params }: Params) {
     }
 
     return (
-        <div className="div mx-auto max-w-full px-6 flex-grow">
+        <div className="mt-16 div mx-auto max-w-full px-6 flex-grow">
             <div className="flex items-start justify-center gap-4 max-w-8xl">
                 <div className="col-span-2">
                     <Module courseDetails={courseDetails} />
