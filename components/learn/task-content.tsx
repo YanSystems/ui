@@ -1,6 +1,5 @@
 import TaskContentHeader from "./task-content-header"
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import Content from "./t.mdx"
 
 export default function TaskContent() {
     const markdown = `

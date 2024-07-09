@@ -15,6 +15,11 @@ export const siteConfig = {
       wip: false,
     },
     {
+      label: "Productivity",
+      href: "/productivity",
+      wip: false,
+    },
+    {
       label: "Docs",
       href: "/docs",
       wip: false,
@@ -29,6 +34,11 @@ export const siteConfig = {
     {
       label: "Teams",
       href: "/teams",
+      wip: false,
+    },
+    {
+      label: "Productivity",
+      href: "/productivity",
       wip: false,
     },
     {
