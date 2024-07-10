@@ -1,8 +1,8 @@
-import { MDXRemote } from "next-mdx-remote/rsc"
+import { MDXRemote } from "next-mdx-remote/rsc";
 
-export default function DocsPage() {
-    const docsContent = "# Test"
-    return <div className="p-16 prose dark:prose-invert">
-        <MDXRemote source={docsContent} />
-    </div>
+export default async function DocsPage() {
+  const docsContent = "# Test";
+  const mdxContent = await MDXRemote({ source: docsContent });
+  return <div className="p-16 prose dark:prose-invert">{mdxContent}</div>;
 }
+

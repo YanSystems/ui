@@ -27,18 +27,6 @@ export const SidebarWrapper = () => {
                 <p className="px-2 text-zinc-400">Yan Systems v{siteConfig.version}</p>
                 <div className="flex flex-col justify-between h-full">
                     <div className={Sidebar.Body()}>
-                        <SidebarMenu title="Users Management">
-                            <SidebarItem
-                                title="Catalogue of Users"
-                                href="#"
-                            />
-                        </SidebarMenu>
-                        <SidebarMenu title="Logs and Monitoring">
-                            <SidebarItem
-                                title="User Interactions"
-                                href="#"
-                            />
-                        </SidebarMenu>
                         <SidebarMenu title="Content Management">
                             <SidebarItem
                                 title="Collection One"

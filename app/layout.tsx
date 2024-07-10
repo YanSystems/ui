@@ -40,10 +40,10 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark", children }}>
-          <div className="relative flex flex-col h-screen">
-            {children}
-          </div>
+        <Providers
+          themeProps={{ attribute: "class", defaultTheme: "dark", children }}
+        >
+          <div className="relative flex flex-col h-screen">{children}</div>
         </Providers>
       </body>
     </html>
