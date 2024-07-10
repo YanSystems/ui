@@ -37,9 +37,19 @@ export const SidebarWrapper = () => {
                                 href="#"
                             />
                         </SidebarMenu>
+                        <SidebarMenu title="Course Management">
+                            <SidebarItem
+                                title="Course 1"
+                                href="#"
+                            />
+                            <SidebarItem
+                                title="Course 2"
+                                href="#"
+                            />
+                        </SidebarMenu>
                     </div>
                 </div>
             </div>
-        </aside>
+        </aside >
     );
 };

@@ -6,8 +6,11 @@ import { Link } from "@nextui-org/link";
 export default function CMSCollectionPage() {
   return (
     <div className="p-16">
-      <div className="flex justify-center">
+      <div className="grid grid-cols-2">
         <h1 className={title({ size: "sm" })}>Collection Name</h1>
+        <div className="flex justify-end">
+          <Button color="primary">Create Document</Button>
+        </div>
       </div>
       <Divider className="my-4" />
       <div className="space-y-2">
