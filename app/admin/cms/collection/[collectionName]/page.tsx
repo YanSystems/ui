@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Divider } from "@nextui-org/react";
 import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
+import { CreateDocumentModal } from "@/components/admin/cms/create-document-modal";
 
 export default function CMSCollectionPage() {
   return (
@@ -9,7 +10,7 @@ export default function CMSCollectionPage() {
       <div className="grid grid-cols-2">
         <h1 className={title({ size: "sm" })}>Collection Name</h1>
         <div className="flex justify-end">
-          <Button color="primary">Create Document</Button>
+          <CreateDocumentModal />
         </div>
       </div>
       <Divider className="my-4" />
