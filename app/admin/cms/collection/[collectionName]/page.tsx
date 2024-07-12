@@ -4,13 +4,21 @@ import { title } from "@/components/primitives";
 import { Link } from "@nextui-org/link";
 import { CreateDocumentModal } from "@/components/admin/cms/create-document-modal";
 
-export default function CMSCollectionPage() {
+type Params = {
+  params: {
+    collectionName: string;
+  }
+}
+
+export default function CMSCollectionPage({ params }: Params) {
+  const { collectionName } = params;
+
   return (
     <div className="p-16">
       <div className="grid grid-cols-2">
         <h1 className={title({ size: "sm" })}>Collection Name</h1>
         <div className="flex justify-end">
-          <CreateDocumentModal />
+          <CreateDocumentModal collection={collectionName} />
         </div>
       </div>
       <Divider className="my-4" />

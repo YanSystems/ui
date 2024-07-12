@@ -2,24 +2,29 @@
 
 import React, { useState } from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Input } from "@nextui-org/react";
+import { createDocument } from "@/actions/services/cms";
 
-export function CreateDocumentModal() {
+type Props = {
+    collection: string
+}
+
+export function CreateDocumentModal({ collection }: Props) {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [className, setClassName] = useState("");
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
 
-    const handleCreate = (onClose: Function) => {
+    const handleCreate = async (onClose: Function) => {
         const payload = {
             "class": className,
             "title": title,
             "description": description,
-            "body": "",
+            "body": "Enter body here...",
             "is_public": true,
             "views": 0,
             "creator_id": "1082fb13-0b98-40dd-876b-0782a2ac91dc",
         }
-        console.log(payload)
+        await createDocument(collection, payload)
         onClose();
     };
 
